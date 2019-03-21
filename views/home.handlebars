@@ -1,0 +1,34 @@
+<!--Homepage-->
+<div class="container">
+    <div class="col-md-12 jumbotron">
+        <div class="text-center">
+            <h1> TMZ Mongo Scraper</h1>
+        </div>
+
+    </div>
+    <div class="col-md-12">
+        {{#if article}}
+        {{#each article}}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4>{{this.title}}</h4>
+            </div>
+            <div>
+                <img>{{this.img}}</img>
+            </div>
+            <div class="panel-body">
+                <p> {{this.summary}}</p>
+                <a href={{this.link}} target="_blank">{{this.link}}</a>
+                <br><br>
+            </div>
+        </div>
+        {{/each}}
+        {{else}}
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h4>Uh Oh. Looks like we don't have any new articles.</h4>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</div>
