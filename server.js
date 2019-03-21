@@ -31,9 +31,10 @@ app.engine("handlebars", exphbs({
 app.set("view engine", "handlebars");
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://heroku_jmv816f9:5j1nd4taq42hi29bfm5hobeujd@ds133192.mlab.com:33192/heroku_jmv816f9");
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 
-var db = mongoose.connection;
+mongoose.connect(MONGODB_URI);
+
 
 db.on("error", function (error) {
   console.log("Mongoose Error: ", error);
