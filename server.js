@@ -40,9 +40,9 @@ mongoose.connect(MONGODB_URI);
 //   console.log("Mongoose Error: ", error);
 // });
 
-db.once("open", function () {
-  console.log("Mongoose connection successful.");
-});
+// db.once("open", function () {
+//   console.log("Mongoose connection successful.");
+// });
 
 // Routes
 app.get("/", function (req, res) {
