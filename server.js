@@ -36,13 +36,13 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://heroku_sr2grszn:mrm5589m
 mongoose.connect(MONGODB_URI);
 
 
-db.on("error", function (error) {
-  console.log("Mongoose Error: ", error);
-});
+// db.on("error", function (error) {
+//   console.log("Mongoose Error: ", error);
+// });
 
-db.once("open", function () {
-  console.log("Mongoose connection successful.");
-});
+// db.once("open", function () {
+//   console.log("Mongoose connection successful.");
+// });
 
 // Routes
 app.get("/", function (req, res) {
